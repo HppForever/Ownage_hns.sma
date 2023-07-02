@@ -3,10 +3,6 @@
 #include <cstrike>  // Библиотека CS
 #include <colorchat> // Библиотека ColorChat
 
-static const PLUGIN_NAME[]  = "Ownage hns"; // Название плагина
-static const PLUGIN_AUTHOR[] = "hpp forever"; // Автор плагина
-static const PLUGIN_VERSION[] = "1.2"; // Версия плагина
-
 new Float: Block[33]; // Массив для хранения времени блокировки игроков
 
 new const Sounds[3][] = { // Массив со звуковыми файлами
@@ -14,13 +10,13 @@ new const Sounds[3][] = { // Массив со звуковыми файлами
 };
 
 public plugin_precache() {
-    precache_sound("mario.wav"); // Предзагружаем звуковой файл
-	precache_sound("ownage.wav");
-    precache_sound("ownage2.wav");
+    precache_sound("mario.wav");      // Предзагружаем звуковой файл
+    precache_sound("ownage.wav");    // Предзагружаем звуковой файл
+    precache_sound("ownage2.wav");  // Предзагружаем звуковой файл
 }
 
 public plugin_init() {
-    register_plugin(PLUGIN_NAME, PLUGIN_VERSION, PLUGIN_AUTHOR); // Регистрируем плагин
+    register_plugin("Ownage hns", "1.2", "hpp forever"); // Регистрируем плагин
     register_forward(FM_Touch, "fwd_Owning"); // Регистрируем форвард
 }
 
